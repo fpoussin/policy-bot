@@ -1230,13 +1230,13 @@ func (s *v4GitSignature) ToSignature() *Signature {
 			State:   s.SMIME.State,
 			Type:    SignatureSmime,
 		}
-	case SignatureSsh:
+	case SignatureSSH:
 		return &Signature{
 			IsValid:        s.SSH.IsValid,
 			KeyFingerprint: s.SSH.KeyFingerprint,
 			Signer:         s.SSH.Signer.GetV3Login(),
 			State:          s.SSH.State,
-			Type:           SignatureSsh,
+			Type:           SignatureSSH,
 		}
 	default:
 		return nil
